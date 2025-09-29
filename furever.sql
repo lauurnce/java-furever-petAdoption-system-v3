@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 28, 2025 at 01:34 PM
+-- Generation Time: Sep 29, 2025 at 02:28 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -53,7 +53,8 @@ INSERT INTO `tbl_adopter` (`adopter_id`, `username`, `adopter_name`, `adopter_co
 (6, 'Adopter20', 'Test Adopter', '09123456789', 'adopter1@example.com', '123 Test Address, City', NULL, 'Adopter20', 'adoptme', 0, NULL),
 (7, 'Lara Croft', 'Lara Croft', '09000000000', 'lara.croft@example.com', 'Tomb Raider Mansion', NULL, 'Lara Croft', 'dsfgerty', 0, NULL),
 (9, 'sarahdiscaya', 'sarahdiscaya', '09000000000', 'sarah@gmail.com', 'Address not provided', NULL, 'sarahdiscaya', 'discaya123', 0, NULL),
-(11, 'Stephen Curry', 'Stephen Curry', '09000000000', 'stephcurry@gmail.com', 'Address not provided', NULL, 'Stephen Curry', 'steph30', 0, NULL);
+(11, 'Stephen Curry', 'Stephen Curry', '09000000000', 'stephcurry@gmail.com', 'Address not provided', NULL, 'Stephen Curry', 'steph30', 0, NULL),
+(12, 'mike ross', 'mike ross', '09000000000', 'michaelross@gmail.com', 'Address not provided', NULL, 'mike ross', 'mikeross123', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -143,7 +144,8 @@ INSERT INTO `tbl_pet` (`pet_id`, `pet_owner_id`, `pet_name`, `pet_type_id`, `des
 (4, 1, 'Kazu', 1, 'musty', 4, 'Male', 'Healthy', NULL, 'Vaccinated', NULL, 'Adopted', '2024-10-20', 0, NULL),
 (5, 1, 'Oni', 2, 'kkk', 3, 'Female', 'Healthy', NULL, NULL, NULL, 'Available', '2025-09-23', 0, NULL),
 (6, 1, 'Luna', 2, 'Makulit na puspin', 2, 'Female', 'Healthy', NULL, NULL, NULL, 'Available', '2025-09-28', 0, NULL),
-(7, 2, 'Zero', 1, 'Aspin', 2, 'Male', 'Healthy', 'Not Uploaded', 'Vaccinated', 'Not Uploaded', 'Available', '2025-09-28', 0, NULL);
+(7, 2, 'Zero', 1, 'Aspin', 2, 'Male', 'Healthy', 'Not Uploaded', 'Vaccinated', 'Not Uploaded', 'Available', '2025-09-28', 0, NULL),
+(8, 1, 'Speed', 1, 'Playful aspin', 1, 'Male', 'Healthy', 'Not Uploaded', 'Vaccinated', 'Not Uploaded', 'Available', '2025-09-29', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -192,7 +194,8 @@ CREATE TABLE `tbl_pet_owner` (
 
 INSERT INTO `tbl_pet_owner` (`pet_owner_id`, `pet_owner_name`, `pet_owner_contact`, `pet_owner_email`, `pet_owner_address`, `pet_owner_profile`, `pet_owner_username`, `pet_owner_password`, `username`, `archived`, `archived_date`) VALUES
 (1, 'Juanito Dela Cruz', '09181234567', 'juan@example.com', '789 Pasig Blvd.', NULL, 'juandc', 'password123', 'juandc', 0, NULL),
-(2, 'karlmarx', '09000000000', 'karl1234@gmail.com', 'Address not provided', NULL, 'karlmarx', 'karl321', 'karlmarx', 0, NULL);
+(2, 'karlmarx', '09000000000', 'karl1234@gmail.com', 'Address not provided', NULL, 'karlmarx', 'karl321', 'karlmarx', 0, NULL),
+(6, 'devinsky', '09762348976', 'devin123@gmail.com', 'Catanduanes', '', 'devinsky', 'devinbooker123', 'devinsky', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -248,7 +251,9 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `created_at`
 (25, 'sarahdiscaya', 'sarah@gmail.com', 'discaya1234', 'adopter', '2025-09-28 05:01:57', 0, NULL),
 (26, 'tigercomando', 'tiger321@gmail.com', 'footlong', 'pet_owner', '2025-09-28 05:11:54', 0, NULL),
 (27, 'Stephen Curry', 'stephcurry@gmail.com', 'steph30', 'adopter', '2025-09-28 10:36:54', 0, NULL),
-(28, 'lebron james', 'lebron@gmail.com', 'lebronjames123', 'admin', '2025-09-28 10:52:36', 0, NULL);
+(28, 'lebron james', 'lebron@gmail.com', 'lebronjames123', 'admin', '2025-09-28 10:52:36', 0, NULL),
+(29, 'mike ross', 'michaelross@gmail.com', 'mikeross123', 'adopter', '2025-09-28 13:00:18', 0, NULL),
+(30, 'devinsky', 'devin123@gmail.com', 'devinbooker123', 'pet_owner', '2025-09-28 15:48:15', 0, NULL);
 
 --
 -- Indexes for dumped tables
@@ -342,7 +347,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `tbl_adopter`
 --
 ALTER TABLE `tbl_adopter`
-  MODIFY `adopter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `adopter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tbl_adoption`
@@ -360,7 +365,7 @@ ALTER TABLE `tbl_adoption_request`
 -- AUTO_INCREMENT for table `tbl_pet`
 --
 ALTER TABLE `tbl_pet`
-  MODIFY `pet_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `pet_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tbl_pet_media`
@@ -372,7 +377,7 @@ ALTER TABLE `tbl_pet_media`
 -- AUTO_INCREMENT for table `tbl_pet_owner`
 --
 ALTER TABLE `tbl_pet_owner`
-  MODIFY `pet_owner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `pet_owner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tbl_pet_type`
@@ -384,7 +389,7 @@ ALTER TABLE `tbl_pet_type`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- Constraints for dumped tables
